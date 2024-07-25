@@ -1,0 +1,698 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.emergency-contact {
+    background-color: #b17c7c;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.emergency-contact span {
+    margin-right: 10px;
+}
+
+header {
+    background-color: #3e4e50;
+    color: #fff;
+    padding: 45px 20px 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 900;
+    width: 100%;
+    top: 0;
+    left: 0;
+   
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar-logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+}
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Shadow Into Light', cursive;
+
+}
+
+/* Basic styles for dropdown */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #b17c7c;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #b17c7c;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+   
+    background-color: #8e5e5e;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.gallery-section {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    height: 350px;
+    width: 100%;
+  
+}
+
+.gallery > div {
+    flex: 1;
+    transition: all 1s;
+}
+
+.gallery > div:nth-child(1) {
+    background: url("Images/murder_club.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(2) {
+    background: url("Images/mystery.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(3) {
+    background: url("Images/it_starts.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(4) {
+    background: url("Images/dare.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(5) {
+    background: url("Images/fredrict.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(6) {
+    background: url("Images/meet_me.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:nth-child(7) {
+    background: url("Images/the\ long.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.gallery > div:hover {
+    flex: 3;
+}
+
+.search-section {
+    text-align: center;
+    padding: 90px 20px 30px;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.search-section h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.search-section form {
+    margin-top: 15px;
+}
+
+.search-section input[type="text"],
+.search-section button {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.search-section input[type="text"] {
+    width: 65%;
+}
+
+.search-section button {
+    background-color: #b17c7c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+    background-color: #8e5e5e;
+}
+
+.featured-books {
+    padding: 20px;
+}
+
+.featured-books h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Shadow Into Light', cursive;
+    
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book-item {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth hover effect */
+}
+
+.book-item:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book-item h4 {
+    margin: 10px 0;
+}
+
+.book-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.rounded-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    background-color: #b17c7c;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.rounded-button:hover {
+    background-color: #8c5555;
+    
+}
+
+.about-section {
+    padding: 20px;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-item {
+    width: 500px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+
+.card-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card-item .title {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card-item .description {
+    font-size: 14px;
+    color: #666;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+   
+}
+
+.about-section .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.about-section .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.about-section .card-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.about-section .card-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.about-section .card-item .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.about-section .card-item .description {
+    color: #666;
+    line-height: 1.6;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 15rem; /* Reduced from 20rem to 15rem */
+  height: 15rem; /* Reduced from 20rem to 15rem */
+  margin: 2rem;
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-2.5rem, -2.5rem);
+}
+
+.container .box:hover .content_1 {
+  transform: translate(2.5rem, 2.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgBox img {
+  width: 15rem; /* Reduced from 20rem to 15rem */
+  height: 15rem; /* Reduced from 20rem to 15rem */
+  object-fit: cover;
+  resize: both;
+}
+
+.content_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem; /* Reduced padding */
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.content_1 h3 {
+  display: block;
+  font-size: 1rem; /* Reduced font-size */
+  color: #111;
+  font-weight: 500;
+  line-height: 1.2rem; /* Adjusted line-height */
+  letter-spacing: 1px;
+   font-family: 'Shadow Into Light', cursive;
+
+}
+
+.content_1 span {
+  color: #555;
+  font-size: 0.8rem; /* Reduced font-size */
+  font-weight: 300;
+  letter-spacing: 1px; /* Adjusted letter-spacing */
+}
+
+.button {
+  margin-top: 0.5rem; /* Adjusted margin */
+  padding: 0.4rem 0.8rem; /* Adjusted padding */
+  font-size: 0.8rem; /* Reduced font-size */
+  font-weight: 400;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .container .box:hover .content_1 {
+    transform: translate(0, 2.5rem);
+  }
+  .container .box:hover .imgBox {
+    transform: translate(0, -2.5rem);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.section-title_1 {
+  font-size: x-large;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-family: 'Shadow Into Light', cursive;
+  margin-left: 20px;
+}
+
+.pricing-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-card-item {
+  position: relative;
+  width: 200px; /* Reduced size */
+  height: 350px; /* Adjusted height to accommodate button */
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card-item img {
+  width: 100px; /* Reduced size */
+  height: 100px; /* Reduced size */
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.pricing-card-item .pricing-title {
+  font-size: 1.2rem; /* Adjusted font size */
+  margin-bottom: 0.5rem;  font-family: 'Shadow Into Light', cursive;
+
+}
+
+.pricing-card-item .pricing-description {
+  font-size: 0.9rem; /* Adjusted font size */
+  margin-bottom: 1rem;
+}
+
+.pricing-card-item .pricing-price {
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Shadow Into Light', cursive;
+}
+
+.pricing-card-item .pricing-buy-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #fff;
+  background-color: #b17c7c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.pricing-card-item .pricing-buy-button:hover {
+    background-color: #8c5555;
+ 
+}
+
+.pricing-card-item:hover {
+  transform: scale(1.05);
+}
+
+.contact-section {
+    padding: 20px;
+    font-family: 'Shadow Into Light', cursive;
+    font-size: medium;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners for the contact form */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visualization */
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for input fields and textarea */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #b17c7c; /* Dusty rose color */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners for the button */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #8c5555; /* Slightly darker shade for hover effect */
+}
+
+.contact-image {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Rounded corners for the contact image */
+    align-items: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+    
+   
+}
+
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .footer-content div {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .footer-content h3 {
+    margin-bottom: 10px;
+}
+
+footer .footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-content ul li {
+    margin-bottom: 10px;
+}
+
+footer .footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-content ul li a:hover {
+    text-decoration: underline;
+}
